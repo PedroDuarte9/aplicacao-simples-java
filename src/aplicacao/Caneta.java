@@ -7,20 +7,53 @@ public class Caneta {
     protected int carga;
     private boolean tampada;
 
-    void status(){
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Essa é a cor: " + cor);
-        System.out.println("Essa é o tamanho da ponta: " + ponta);
-        System.out.println("Essa é a carga: " + carga);
-        System.out.println("Está tampada: " + tampada);
+    public String getModelo(){
+        return this.modelo;
+    }
+    public void setModelo(String m){
+        this.modelo = m;
+    }
+    public String getCor(){
+        return this.cor;
+    }
+    public void setCor(String c){
+        this.cor = c;
+    }
+    public double getPonta(){
+        return this.ponta;
+    }
+    public void setPonta(double p){
+        this.ponta = p;
+    }
+    public int getCarga(){
+        return this.carga;
+    }
+    public void setCarga(int cc){
+        this.carga = cc;
+    }
+    public boolean getTampada(){
+        return this.tampada;
+    }
+    public void setTampada(boolean b){
+        this.tampada = b;
+    }
+
+    public void status(){
+        System.out.println("Modelo: " + getModelo());
+        System.out.println("Essa é a cor: " + getCor());
+        System.out.println("Essa é o tamanho da ponta: " + getPonta());
+        System.out.println("Essa é a carga: " + getCarga());
+        System.out.println("Está tampada: " + getTampada());
     }
 
 
     public void rabiscar() {
-        if (this.tampada == true) {
-            System.out.println("Não posso rabiscar, caneta tampada");
-        } else {
+        if (tampada == false) {
             System.out.println("Rabiscando");
+
+        } else {
+            System.out.println("Não posso rabiscar, caneta tampada");
+
         }
     }
 
